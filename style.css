@@ -4,23 +4,33 @@
     color: white;
 }
 
+html{
+    height: 100%;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
+    height: 100%;
 }
 
 .container{
     max-width: 90%;
+    height: 100%;
     padding: 0 1.5rem;
     margin: auto;
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 
 .scene{
     width: 12.5rem;
     height: 12.5rem;
-    margin: auto;
-    margin-top: 200px;
+    /* margin: 0 auto; */
     perspective: 500px;
 }
 
@@ -59,13 +69,17 @@ body {
 .cube.show-top{ transform: translateZ(-6.25rem) rotateX(-90deg);}
 .cube.show-bottom{ transform: translateZ(-6.25rem) rotateX(90deg);}
 
+
+
 .radio-group{
-    margin: auto;
-    padding: 3rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 0 3rem;
 
     display: flex;
     justify-content: center;
     align-items:center;
+    flex-wrap: wrap;
 }
 
 .radio-group label{
