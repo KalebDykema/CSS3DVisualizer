@@ -68,14 +68,41 @@ body {
 .cube.show-left{ transform: translateZ(-6.25rem) rotateY(90deg);}
 .cube.show-top{ transform: translateZ(-6.25rem) rotateX(-90deg);}
 .cube.show-bottom{ transform: translateZ(-6.25rem) rotateX(90deg);}
-.cube.rotate{ -webkit-animation: rotation 10s infinite linear; }
+.cube.rotate{
+    -ms-animation: rotation 10s infinite linear;
+    -webkit-animation: rotation 10s infinite linear;
+    -moz-animation: rotation 10s infinite linear;
+    -o-animation: rotation 10s infinite linear;
+    animation: rotation 10s infinite linear;
+}
 
 @-webkit-keyframes rotation{
     from{
         -webkit-transform: translateZ(-6.25rem);
+        -o-transform: translateZ(-6.25rem);
+        transform: translateZ(-6.25rem);
     }
     to{
         -webkit-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        -o-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+    }
+}
+
+@keyframes rotation{
+    from{
+        -ms-transform: translateZ(-6.25rem);
+        -moz-transform: translateZ(-6.25rem);
+        -webkit-transform: translateZ(-6.25rem);
+        -o-transform: translateZ(-6.25rem);
+        transform: translateZ(-6.25rem);
+    }
+    to{
+        -ms-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        -moz-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        -webkit-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        -o-transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
+        transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
     }
 }
 
