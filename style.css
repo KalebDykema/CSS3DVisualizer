@@ -68,8 +68,16 @@ body {
 .cube.show-left{ transform: translateZ(-6.25rem) rotateY(90deg);}
 .cube.show-top{ transform: translateZ(-6.25rem) rotateX(-90deg);}
 .cube.show-bottom{ transform: translateZ(-6.25rem) rotateX(90deg);}
+.cube.rotate{ animation: rotation 10s infinite linear; }
 
-
+@keyframes rotation{
+    from{
+        transform: translateZ(-6.25rem);
+    }
+    to{
+        transform: translateZ(-6.25rem) rotate3d(1, 1, 1, 359deg);
+    }
+}
 
 .radio-group{
     margin: 0 auto;

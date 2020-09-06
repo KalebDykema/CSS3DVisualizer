@@ -4,7 +4,9 @@ let currentClass = '';
 
 function changeSide() {
     let checkedRadio = radioGroup.querySelector(':checked');
-    let showClass = 'show-' + checkedRadio.value;
+    let showClass;
+    if(checkedRadio.value==='rotate') showClass = checkedRadio.value;
+    else showClass = 'show-' + checkedRadio.value;
     if(currentClass) cube.classList.remove(currentClass);
     cube.classList.add(showClass);
     currentClass = showClass;
