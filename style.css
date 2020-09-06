@@ -75,7 +75,7 @@ body {
         transform: translateZ(-6.25rem);
     }
     to{
-        transform: translateZ(-6.25rem) rotate3d(1, 1, 1, 359deg);
+        transform: translateZ(-6.25rem) rotate3d(1, 0.66667, 0.33333, 360deg);
     }
 }
 
