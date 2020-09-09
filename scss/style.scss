@@ -1,0 +1,28 @@
+/* 
+Extend/Inheritance
+%common-traits{
+    border: something
+    padding: something
+}
+thing-1{
+    @extend %common-traitsl
+    color: red;
+}
+thing-2{
+    @extend %common-traitsl
+    color: blue;
+}
+*/
+
+@import 'config';
+@import 'utilities';
+@import 'cube';
+
+* { box-sizing: border-box; }
+
+html, body {
+    @include set-background($background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $font-size;
+    height: 100%;
+}

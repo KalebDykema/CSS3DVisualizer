@@ -1,0 +1,48 @@
+.container{
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-group{
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 0 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+
+    label{
+        margin: 0 0.3rem;
+    }
+}
+
+// Margin & Padding Classes
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts {
+    .m-#{$space}{ margin: #{$space}rem; }
+    .mx-#{$space}{ margin: 0 #{$space}rem; }
+    .my-#{$space}{ margin: #{$space}rem 0; }
+
+    .p-#{$space}{ padding: #{$space}rem; }
+    .px-#{$space}{ padding: 0 #{$space}rem; }
+    .py-#{$space}{ padding: #{$space}rem 0; }
+}
+
+.m-auto{ margin: auto }
+.mx-auto{ margin: 0 auto}
+.my-auto{ margin: auto 0}
+
+.p-auto{ padding: auto }
+.px-auto{ padding: 0 auto}
+.py-auto{ padding: auto 0}
+
+
+

@@ -1,0 +1,34 @@
+// Variables
+$font-size: 20px;
+$background-color: black;
+$cube-size: 8rem;
+$cube-color: lightgreen;
+$face-color: darken(rgba(19,127,19,0.5), 50%);
+
+// Set text color based on background
+@function set-text-color($color){
+    @if(lightness($color) > 70) {
+        @return #333;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+// Set background & text color
+@mixin set-background($color){
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+// Set width and height to same value
+@mixin set-dimensions-to-same-value($dimension){
+    width: $dimension;
+    height: $dimension;
+}
+
+// Sets up rotation and location of cube face
+@mixin transform-cube-face($rotationValue, $axis){
+    @if $axis == x or $axis == X { transform: rotateX($rotationValue) translateZ($cube-size/2); }
+    @else if $axis == y or $axis == Y { transform: rotateY($rotationValue) translateZ($cube-size/2); }
+}

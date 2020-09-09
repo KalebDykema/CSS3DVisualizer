@@ -1,0 +1,43 @@
+.scene{
+    @include set-dimensions-to-same-value($cube-size);
+    perspective: 500px;
+}
+
+.cube{
+    @include set-dimensions-to-same-value($cube-size);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    text-align: center;
+    line-height: $cube-size;
+    font-size: $cube-size/4 !important;
+}
+
+.show-front{ transform: rotateY(0deg); }
+    .show-back{ transform: rotateY(180deg); }
+    .show-right{ transform: rotateY(-90deg); }
+    .show-left{ transform: rotateY(90deg); }
+    .show-top{ transform: rotateX(-90deg); }
+    .show-bottom{ transform: rotateX(90deg); }
+    .rotate{ animation: rotation 10s infinite linear;
+}
+
+.cube-face{
+    @include set-dimensions-to-same-value($cube-size);
+    position: absolute;
+    border: $cube-size*0.015625 solid $cube-color;
+
+    &-front{ @include transform-cube-face(0deg, Y); background: $face-color;}
+    &-back{ @include transform-cube-face(180deg, Y); background: $face-color;}
+    &-right{ @include transform-cube-face(90deg, Y); background: $face-color;}
+    &-left{ @include transform-cube-face(-90deg, Y); background: $face-color;}
+    &-top{ @include transform-cube-face(90deg, X); background: $face-color;}
+    &-bottom{ @include transform-cube-face(-90deg, X); background: $face-color;}
+    .rotate{ animation: rotation 10s infinite linear;}
+}
+
+@keyframes rotation{
+    to{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}

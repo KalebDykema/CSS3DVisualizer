@@ -13,6 +13,6 @@ function changeSide() {
 }
 
 // Set initial side
-changeSide()
+changeSide();
 
 radioGroup.addEventListener('change', changeSide);
