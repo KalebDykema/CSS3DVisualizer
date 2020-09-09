@@ -2,7 +2,7 @@
 
 This is a test and visualization of the 3D transforms included with CSS3.
 
-![webcalc_screenshot](https://github.com/KalebDykema/WebCalc/blob/master/css3dvisualizer.png)
+![webcalc_screenshot](https://github.com/KalebDykema/CSS3DVisualizer/blob/master/css3dvisualizer.png)
 
 # Description
 
