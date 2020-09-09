@@ -2,8 +2,8 @@
 $font-size: 20px;
 $background-color: black;
 $cube-size: 8rem;
-$cube-color: lightgreen;
-$face-color: rgba(4,25,4,0.5);
+$cube-color: rgb(144, 238, 144);
+$face-color: darken(rgba($cube-color, 0.5), 72.83%);
 
 // Set text color based on background
 @function set-text-color($color){
